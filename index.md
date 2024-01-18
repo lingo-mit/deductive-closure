@@ -56,7 +56,9 @@ As shown in Fig. 4, DCT significantly outperforms fine-tuning on edits, fine-tun
 #### Sanity Checks for Consistent Model Updating
 In addition to naturalistic question asking tasks like MQUaKE, there has been recent interest in developing precise tests of LMs' ability to capture simple logical implications of new facts (e.g. assigning high probability to sentences of the form *B is A* after training on sentences of the form *A is B*). We investigate whether DCT can address these issues using the [Reversal Curse](https://arxiv.org/abs/2309.12288) benchmark.
 
-We report results on two evaluations: first, a set of celebrity parent--child pairs with training examples *Jennifer Lawrence's mother is Karen Lawrence* and test examples *Who is the child of Karen Lawrence?*; second, a set of entity--description pairs with training examples *Olaf Scholz was the ninth Chancellor of Germany* and cloze-style test examples *The ninth Chancellor of Germany is ___*.
+We report results on two evaluations: first, a set of celebrity parent-child pairs with training examples *Jennifer Lawrence's mother is Karen Lawrence* and test examples *Who is the child of Karen Lawrence?*; second, a set of entity-description pairs with training examples *Olaf Scholz was the ninth Chancellor of Germany* and cloze-style test examples *The ninth Chancellor of Germany is ___*.
+
+Results are shown in Fig. 5. On average, DCT improves accuracy on reversed statements without significantly hurting performance on original questions. Notably, however, DCT with this general-purpose prompt does not completely solve this dataset, and we leave for future work the question of whether more extensive sampling or other procedures could further improve these results.
 
 <p align="center">
   <img src="reversal_chart.png" alt="drawing" width="600"/>
