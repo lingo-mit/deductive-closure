@@ -5,7 +5,7 @@
 
 **Afra Feyza Akyürek, Ekin Akyürek, Leshem Choshen, Derry Wijaya and Jacob Andreas.**
 
-[Paper](https://arxiv.org/abs/2401.08574) & [Code](https://github.com/lingo-mit/deductive-closure)
+Paper: [https://arxiv.org/abs/2401.08574](https://arxiv.org/abs/2401.08574)
 
 
 ## Motivation
