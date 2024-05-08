@@ -5,7 +5,7 @@ Project page: https://lingo-mit.github.io/deductive-closure/
 
 Afra Feyza Akyürek, Ekin Akyürek, Leshem Choshen, Derry Wijaya, and Jacob Andreas
 
-![Figure 1: Overview of Deductive Closure Training (DCT). To improve coherence of language model predictions, we begin with a set of seed documents (pink-highlighted), then use an LM to generate a collection of statements implied by or contradicting these. Next, we find the most probable subset before fine-tuning the LM on the selected subset.](teaser_small.png)
+![Figure 1: Overview of Deductive Closure Training (DCT). To improve coherence of language model predictions, we begin with a set of seed documents (pink-highlighted), then use an LM to generate a collection of statements implied by or contradicting these. Next, we find the most probable subset before fine-tuning the LM on the selected subset.](teaser_small.jpg)
 
 ## Abstract
 
