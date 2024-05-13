@@ -13,12 +13,16 @@ While language models (LMs) can sometimes generate factually correct text and es
 
 ## Running Experiments
 
-Create an environment and install the required packages in `requirements.txt`.
+Create an environment and install the required packages in `requirements.txt`. Data is available in [Google Drive](https://drive.google.com/drive/folders/1Qac61vX36PZwn7rgZPNAwV8T2cDTYqei?usp=sharing). At this time, the repo contains data and scripts only for running MQUaKE experiments.
 
 ### 1. Generating DCT graphs
 
-Checkout the samples scripts under `scripts` e.g. use `sh scripts/run_generate_graphs_mquake.sh`. Graphs will appear under `dumped` directory.
+Checkout the sample scripts under `scripts` e.g. use `sh scripts/run_generate_graphs_mquake.sh`. Graphs will appear under `dumped` directory.
 
 ### 2. Converting Statements into Evaluation Format (MQUaKE, Reversal Curse)
 
-Checkout the samples scripts under `scripts` e.g. use `sh scripts/run_question_conversion_mquake.sh`. This script calls `create_question_conversions_mquake_llama.py`, make sure to point to the correct llama checkpoint and tokenizer paths. Within this script you can specify the paths to the graphs for which you want to convert statements to questions. The converted files will appear under the same directories as the graphs.
+Checkout the sample scripts under `scripts` e.g. use `sh scripts/run_question_conversion_mquake.sh`. This script calls `create_question_conversions_mquake_llama.py`, make sure to point to the correct llama checkpoint and tokenizer paths. Within this script you can specify the paths to the graphs for which you want to convert statements to questions. The converted files will appear under the same directories as the graphs.
+
+### 3. Fine-Tuning and Evaluation
+
+Use `sh scripts/run_finetune_eval_mquake.sh` for fine-tuning LLaMa with peft library. This script requires the huggingface version of llama. If you don't have it [here](https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/convert_llama_weights_to_hf.py) is a conversion script or just let the script download the model for you. The adapter checkpoints and predictions for test set will appear under the same directories as the graphs. For test examples, see the Google Drive link above.
