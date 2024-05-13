@@ -15,6 +15,10 @@ While language models (LMs) can sometimes generate factually correct text and es
 
 Create an environment and install the required packages in `requirements.txt`.
 
-### Generation DCT graphs
+### 1. Generating DCT graphs
 
 Checkout the samples scripts under `scripts` e.g. use `sh scripts/run_generate_graphs_mquake.sh`. Graphs will appear under `dumped` directory.
+
+### 2. Converting Statements into Evaluation Format (MQUaKE, Reversal Curse)
+
+Checkout the samples scripts under `scripts` e.g. use `sh scripts/run_question_conversion_mquake.sh`. This script calls `create_question_conversions_mquake_llama.py`, make sure to point to the correct llama checkpoint and tokenizer paths. Within this script you can specify the paths to the graphs for which you want to convert statements to questions. The converted files will appear under the same directories as the graphs.
