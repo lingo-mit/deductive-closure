@@ -8,6 +8,7 @@ import argparse
 from typing import Any
 import itertools
 import string
+import random
 
 
 def parser_from_dataclass(data_class: Any) -> argparse.ArgumentParser:
@@ -383,8 +384,9 @@ def eval_creak(preds, labels):
         pred = "".join([c for c in pred if c not in string.punctuation])
         true = true.strip().lower()
         pred = pred.strip().lower()
-        if true in pred:
-            # Warning: can mark "True and False" as true.
+        if "true" in pred and "false" in pred:
+            correct_l.append(True if random.random() > 0.5 else False)
+        elif true in pred:
             correct_l.append(True)
         else:
             correct_l.append(False)
